@@ -1,0 +1,195 @@
+<div class="container">
+    <h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px;" >Sistema de Control de Horas Extra</h1>
+    <div class="row">
+        <div class="col-3">
+            <p>Documento</p>
+            <input class="form-control" type="number" [(ngModel)]="documento" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Primer nombre</p>
+            <input class="form-control" type="text" [(ngModel)]="nombre1" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Segundo nombre</p>
+            <input class="form-control" type="text" [(ngModel)]="nombre2" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Primer apellido</p>
+            <input class="form-control" type="text" [(ngModel)]="apellido1" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Segundo apellido</p>
+            <input class="form-control" type="text" [(ngModel)]="apellido2" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Fecha inicio</p>
+            <input class="form-control" type="date" [(ngModel)]="fechaIni" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Fecha fin</p>
+            <input class="form-control" type="date" [(ngModel)]="fechaFin" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Horario de inicio de turno</p>
+            <input class="form-control" type="time" [(ngModel)]="horaTurnoIni" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Horario de fin de turno</p>
+            <input class="form-control" type="time" [(ngModel)]="horaTurnoFin" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Horario de inicio hora extra</p>
+            <input class="form-control" type="time" [(ngModel)]="horaIniExtra" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Horario de fin de hora extra</p>
+            <input class="form-control" type="time" [(ngModel)]="horaFinExtra" required>
+            <br>
+            <br>
+        </div>
+        <div class="col-3">
+            <p>Motivo</p>
+            <input class="form-control" type="text" [(ngModel)]="motivo" required>
+            <br>
+            <br>
+        </div>
+        <div style="margin-top: 20px; margin-bottom: 20px;">
+            <button  class="btn btn-success col-mx-auto" (click)="enviarDatos()">Enviar</button>
+        </div>
+    </div>
+</div>
+
+<table id="idTabla" class="table table-striped table-bordered">
+    <tr>
+        <td>
+            DOCUMENTO
+        </td>
+        <td>
+            PRIMER NOMBRE
+        </td>
+        <td>
+            SEGUNDO NOMBRE
+        </td>
+        <td>
+            PRIMER APELLIDO
+        </td>
+        <td>
+            SEGUNDO APELLIDO
+        </td>
+        <td>
+            FECHA DE INICIO
+        </td>
+        <td>
+            FECHA DE FIN
+        </td>
+        <td>
+            HORARIO DE INICIO DE TURNO
+        </td>
+        <td>
+            HORARIO DE FIN DE TURNO
+        </td>
+        <td>
+            HORARIO DE INICIO DE HORA EXTRA
+        </td>
+        <td>
+            HORARIO DE FIN DE HORA EXTRA
+        </td>
+        <td>
+            MOTIVO
+        </td>
+    </tr>
+    <tr *ngFor="let dato of arreglo">
+        <td>
+            {{dato.documento}}
+        </td>
+        <td>
+            {{dato.nombre1}}
+        </td>
+        <td>
+            {{dato.nombre2}}
+        </td>
+        <td>
+            {{dato.apellido1}}
+        </td>
+        <td>
+            {{dato.apellido2}}
+        </td>
+        <td>
+            {{dato.fechaIni}}
+        </td>
+        <td>
+            {{dato.fechaFin}}
+        </td>
+        <td>
+            {{dato.horaTurnoIni}}
+        </td>
+        <td>
+            {{dato.horaTurnoFin}}
+        </td>
+        <td>
+            {{dato.horaIniExtra}}
+        </td>
+        <td>
+            {{dato.horaFinExtra}}
+        </td>
+        <td>
+            {{dato.motivo}}
+        </td>
+    </tr>
+
+</table>
+
+<h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px;">Datos Consumidos de https://jsonplaceholder.typicode.com/</h1>
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <td>
+            Id de usuario
+        </td>
+        <td>
+            Id
+        </td>
+        <td>
+            titulo
+        </td>
+        <td>
+            completed
+        </td>
+    </tr>
+    <tr *ngFor="let dato of arreglo2">
+        <td>
+            {{dato.userId}}
+        </td>
+        <td>
+            {{dato.id}}
+        </td>
+        <td>
+            {{dato.title}}
+        </td>
+        <td>
+            {{dato.completed}}
+        </td>
+        
+    </tr>
+
+</table>
